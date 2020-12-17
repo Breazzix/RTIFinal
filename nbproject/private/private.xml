@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/serveurpoolthreads/ThreadServeur.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Serveur_Mouvements/DialogFacture.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/manifest.mf</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/utilitaire/FichierConfig.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessItems_Facture.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessPersonnel.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessMouvements.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/serveurpoolthreads/ThreadClient.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/ProtocoleSUM/RequeteSUM.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessTransporteurs.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Classes/Facture.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/Config.properties</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Application_Compta/Login.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Application_Compta/Applic_Data_Analysis.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessFacture.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/utilitaire/DialogErreur.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccessSocietes.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/bdaccess/BeanBDAccess.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Classes/Mouvement.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Serveur_Mouvements/FenServeurMouvements.java</file>
+            <file>file:/C:/Users/vange/Documents/NetBeansProjects/Eval4_RTI/src/Serveur_Compta/FenServeurCompta.java</file>
+        </group>
+    </open-files>
+</project-private>
