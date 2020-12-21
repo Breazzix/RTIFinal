@@ -7,6 +7,7 @@ package bdaccess;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
 
 /**
  *
@@ -35,4 +36,54 @@ public class BeanBDAccessSocietes extends BeanBDAccess{
         
         return nomSoc;
     }
+    
+    public synchronized static String selectSociete (String nomSociete) throws SQLException
+    {
+        
+        String idSoc;
+        rs =  instruc.executeQuery("select * from societes where NomContact = '" + nomSociete +"'");
+        
+        
+        rs.next();
+        
+        try {
+           idSoc = rs.getString("idSoc");   
+        } catch (Exception e) {
+            idSoc="";
+        }
+        
+        return idSoc;
+    }
+    
+    
+    
+    public synchronized static LinkedList<String> getListeSocietes () throws SQLException
+    {
+        
+        LinkedList<String> listeSocietes = new LinkedList<String>();
+        String tmp;
+        
+        rs =  instruc.executeQuery("select * from societes");
+        
+        while(rs.next()){
+            tmp = rs.getString("NomContact");
+            listeSocietes.add(tmp);
+        }
+        
+        return listeSocietes;
+    }
+    
+    public synchronized int SelectSocieteByName (String name) throws SQLException
+    {
+        int id = -1;
+        
+        rs = instruc.executeQuery("select * from societes where Upper (NomContact) = Upper('" + name + "')");
+        
+        if (rs.next())
+        {
+            id = rs.getInt("idSoc");
+        }
+        return id;
+    }
 }
+

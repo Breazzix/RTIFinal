@@ -5,7 +5,7 @@
  */
 package Serveur_Mouvements;
 
-import static Application_Compta.Applic_Data_Analysis.ConfigProperty;
+import static Application_Compta.Applic_Compta.ConfigProperty;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;

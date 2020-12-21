@@ -32,10 +32,15 @@ public class FenServeurCompta extends javax.swing.JFrame implements ConsoleServe
     ThreadServeur tsMouv;
     ThreadServeur tsCompta;
     
+    private static final int coord_x = 1000;
+    private static final int coord_y = 200;
+    
     public FenServeurCompta(){
         initComponents();
+        setLocation(coord_x, coord_y);
         this.setTitle("Serveur Compta");
         TraceEvenements("serveur#initialisation#main");
+        
     }
 
     /**

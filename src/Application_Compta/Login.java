@@ -175,7 +175,7 @@ public class Login extends javax.swing.JDialog {
                     byte[] msgClairHmac = chiffrementd.doFinal(msgCleHmac);
                     cleHmac = new SecretKeySpec(msgClairHmac, 0, msgClairHmac.length,"DES");
                     
-                    Applic_Data_Analysis fen = new Applic_Data_Analysis(cliSock, PrivateKeyClient, PublicKeyServer, cleSession, cleHmac);
+                    Applic_Compta fen = new Applic_Compta(cliSock, PrivateKeyClient, PublicKeyServer, cleSession, cleHmac);
                     fen.setVisible(true);
                     this.dispose();
                 }

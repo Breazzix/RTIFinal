@@ -52,4 +52,21 @@ public class BeanBDAccessPersonnel extends BeanBDAccess{
         
         return pwd;
     }
+    
+    public synchronized int selectId (String user) throws SQLException
+    {
+        int id=1;
+        
+        rs =  instruc.executeQuery("select * from personnel where Login = '" + user +"'");
+        
+        rs.next();
+        
+        try {
+            id = rs.getInt("Matricule");
+        } catch (Exception e) {
+            id = 1;
+        }
+        
+        return id;
+    }
 }

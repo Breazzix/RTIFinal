@@ -5,11 +5,15 @@
  */
 package Classes;
 
+import java.io.Serializable;
+import java.util.StringTokenizer;
+import utilitaire.FichierConfig;
+
 /**
  *
  * @author vange
  */
-public class Facture {
+public class Facture implements Serializable{
     
     private int idFacture;
     private String societe;
@@ -21,6 +25,7 @@ public class Facture {
     private int flagSent;
     private String moyenEnvoi;
     private int flagPaid;
+    public static FichierConfig ConfigProperty = new FichierConfig();
 
     public Facture(int idFacture, String societe, String date, String montantTotal, String montantAPayer, int flagValidated, int idComptableValidateur, int flagSent, String moyenEnvoi, int flagPaid) {
         this.idFacture = idFacture;
@@ -33,6 +38,23 @@ public class Facture {
         this.flagSent = flagSent;
         this.moyenEnvoi = moyenEnvoi;
         this.flagPaid = flagPaid;
+    }
+    
+    public Facture(String facture)
+    {
+        StringTokenizer st;
+        st = new StringTokenizer(facture, FichierConfig.getConfig().getProperty("separateur"));
+        
+        this.idFacture = Integer.parseInt(st.nextToken());
+        this.societe = st.nextToken();
+        this.date = st.nextToken();
+        this.montantTotal = st.nextToken();
+        this.montantAPayer = st.nextToken();
+        this.flagValidated = Integer.parseInt(st.nextToken());
+        this.idComptableValidateur = Integer.parseInt(st.nextToken());
+        this.flagSent = Integer.parseInt(st.nextToken());
+        this.moyenEnvoi = st.nextToken();
+        this.flagPaid = Integer.parseInt(st.nextToken());
     }
 
     public int getIdFacture() {
