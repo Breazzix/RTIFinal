@@ -302,6 +302,7 @@ public class RequeteSUM implements Requete, Serializable{
                 System.exit(1);
             
             String user = dis.readUTF();
+          
             System.out.println("Utilisateur = " + user); 
             long temps = dis.readLong(); 
             System.out.println("temps = " + temps); 

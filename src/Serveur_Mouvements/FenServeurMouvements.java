@@ -31,10 +31,12 @@ public class FenServeurMouvements extends javax.swing.JFrame implements ConsoleS
      * Creates new form FenServeurMouvements
      */
     private int port;
+    private int portContainer;
     public static FichierConfig ConfigProperty = new FichierConfig();
     private Object[] col = { "Origine", "Requête", "Thread"};
     private DefaultTableModel modelTable = new DefaultTableModel(col, 0);
     ThreadServeur ts;
+    ThreadServeurCont tsContainer;
     private String sepProperty;
     private String finChaine;
     private String adresse;
@@ -205,17 +207,23 @@ public class FenServeurMouvements extends javax.swing.JFrame implements ConsoleS
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
-        // TODO add your handling code here:
-        port = Integer.parseInt(ConfigProperty.getConfig().getProperty("portIn"));
+       port = Integer.parseInt(ConfigProperty.getConfig().getProperty("portIn"));
+        portContainer = Integer.parseInt(ConfigProperty.getConfig().getProperty("portContainer"));
         System.out.println("port:" + port);
-        TraceEvenements("serveur#acquisition du port#main");
+        System.out.println("portContainer:" + portContainer);
+        TraceEvenements("serveur#acquisition du port" + port + "#main");
+        TraceEvenements("serveur#acquisition du port" + portContainer + "#main");
         ts = new ThreadServeur(port,"In", new ListeTaches(), this);
         ts.start();
+        
+        tsContainer = new ThreadServeurCont(portContainer,"portContainer", new ListeTaches(), this);
+        tsContainer.start();  
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButtonStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStopActionPerformed
         try {
             ts.fermer();
+            tsContainer.fermer();
         } catch (IOException ex) {
             Logger.getLogger(FenServeurMouvements.class.getName()).log(Level.SEVERE, null, ex);
         }
